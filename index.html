@@ -52,6 +52,24 @@
       #first_column {
         float:right;
       }
+          video {
+        object-fit: cover;
+    }
+    
+</style>
+
+</head><body><video id="video" autoplay loop>
+    <source src="media/video.mp4" type="video/mp4">
+</video>
+
+<script>
+    window.onload = () => {
+        video.onplay = () => {
+            video.volume = 0.5;
+            window.overlay.remove();
+        }
+    }
+</script>
     </style>
 <script>
       const PassChar = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
